@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*===== APLICACIÓN DE FUENTES SOBRE ELEMENTOS =====*/
+
+h1 {
+    font-family: $font-titulo;
+}
+  
+h2, h3, h4, h5, h6 {
+    font-family: $font-subtitulo;
+}
+  
+p {
+    font-family: $font-texto;
+}
+  
+a {
+    font-family: $font-texto;
+    color: $colorTerciario;
+    text-decoration: none;
+    /*font-weight: 400;*/
+}
+  
+p a {
+    font-family: $font-link;
+    color: $colorTerciario;
+    text-decoration: none;
+    /*font-weight: 400;*/
+}
+  
+form {
+    font-family: $font-link;
+}
+    
+::placeholder {
+    font-family: $font-link;
+}
+  
+summary {
+    font-family: $font-texto;
+}
+  
+li {
+    font-family: $font-texto;
+}
+  
+input {
+    font-family: $font-texto;
+}
+  
+button {
+    font-family: $font-texto;
+}
+
+/*===== EFECTO HOVER =====*/
+
+a:hover {
+    font-weight: $colorPrimario;
+}  
+      
+details summary:hover {
+    font-weight: $colorPrimario;
+}  
+      
+p a:hover {
+    font-weight: $colorPrimario;
+}  
+  
+ul{
+    list-style-type: none
+}
+
+/*==== ESTILO BODY ====*/
+
+body {
+    background-color: $colorCuarto;
+    color: $colorTerciario; /* Texto blanco */
+    line-height: 1.5; /* Mejora la legibilidad */
+    background-size: cover; /* Escala la imagen al tamaño completo */
+    background-repeat: no-repeat; /* Evita repeticiones */
+    background-position: center; /* Centra la imagen */
+}
+
+/*===== BARRA DESPLAZAMIENTO =====*/
+
+/* Personaliza la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 13px; /* Ancho de la barra */
+}
+  
+/* Color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: $colorCuarto; /* Color del "track" interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+  
+/* Color del deslizador */
+::-webkit-scrollbar-thumb {
+    background-color: $colorPrimario; /* Color del deslizador */
+    border-radius: 10px; /* Bordes redondeados del deslizador */
+    border: 3px solid $colorCuarto; /* Espaciado interno con el color del "track" */
+}
+  
+/* Estilo al pasar el cursor sobre el deslizador */
+::-webkit-scrollbar-thumb:hover {
+    background-color: $colorSecondario; /* Color al hacer hover */
+}
+  
+/* Estilo para Firefox */
+body {
+    scrollbar-width: thin; /* Grosor del scrollbar */
+    scrollbar-color: $colorCuarto $colorPrimario; /* Color del deslizador y del track */
+}
+  
+/* Estilo para los enlaces */
+a {
+    color: $colorTerciario; /* Enlaces en blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+  
+a:hover {
+    color: $colorSecondario; /* Cambia al pasar el mouse */
+    text-decoration: none; /* Sin subrayado al pasar el mouse */
+}
+
+

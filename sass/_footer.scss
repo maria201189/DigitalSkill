@@ -1,0 +1,121 @@
+footer {
+    display: flex; /* Flexbox para organizar elementos */
+    justify-content: space-between; /* Espaciado entre columnas */
+    align-items: center; /* Alineación vertical */
+    color: $colorTerciario; /* Texto blanco */
+    padding: 1.5em; /* Espaciado interno */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    text-align: center;
+    font-size: 0.9em;
+}
+  
+/* Columnas izquierda, central y derecha */
+.footer-izq, .footer-central, .footer-derecha {
+    flex: 1; /* Ocupan el mismo ancho inicialmente */
+    margin: 10px 0; /* Espaciado vertical */
+}
+  
+.footer-izq {
+    display: flex;
+    flex-direction: column; /* Apila elementos verticalmente en pantallas pequeñas */
+    text-align: left;
+    gap: 5px; /* Espaciado entre p y H4 */
+}
+  
+.footer-derecha {
+    text-align: right;
+}
+  
+.footer-central p {
+    margin: 10px 0; /* Espaciado inferior */
+    font-size: 14px; /* Tamaño de texto más pequeño */
+}
+  
+/* Social Media */
+.social-media {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    gap: 15px; /* Espaciado entre iconos */
+    list-style: none; /* Quita viñetas */
+    padding: 0;
+}
+  
+.social-media img {
+    width: 20px; /* Tamaño de iconos */
+    height: 20px; /* Proporción cuadrada */
+    transition: transform 0.2s;
+}
+  
+.social-media img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
+  
+/* Enlaces legales */
+.legal {
+    list-style: none; /* Sin viñetas */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Centra los enlaces */
+}
+  
+.legal li {
+    margin-bottom: 5px; /* Espaciado entre líneas */
+}
+  
+.legal a {
+    color: $colorTerciario;
+    text-decoration: none; /* Quita subrayado */
+}
+  
+.legal a:hover {
+    color: $colorSecondario;
+}
+  
+/* ===== Estilos responsivos ===== */
+  
+/* Para móviles (pantallas pequeñas) */
+  
+@media (max-width: 600px) {
+    footer {
+      flex-direction: column; /* Cambia a diseño vertical */
+      padding: 1em; /* Espaciado reducido */
+    }
+  
+    .footer-izq, .footer-central, .footer-derecha {
+      text-align: center; /* Centra todo el contenido */
+      margin: 10px 0; /* Espaciado uniforme */
+    }
+  
+    .footer-izq {
+      flex-direction: column; /* Apila los elementos */
+    }
+}
+  
+/* Para tablets (pantallas medianas) */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    footer {
+      padding: 1.2em; /* Espaciado moderado */
+    }
+  
+    .footer-izq, .footer-central, .footer-derecha {
+      text-align: center; /* Mantén centrado para mayor legibilidad */
+    }
+}
+  
+/* Para escritorio (pantallas grandes) */
+
+@media (min-width: 1025px) {
+    footer {
+      flex-direction: row; /* Mantén diseño horizontal */
+      padding: 2em; /* Espaciado amplio */
+    }
+  
+    .footer-izq {
+      text-align: left;
+    }
+  
+    .footer-derecha {
+      text-align: right;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma elearning Digital Skill</title>
+    <!-- Enlace apertura Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navegación para tablet y desktop -->
+    <nav class="barra-navegadora">
+        <ul class="nav-izquierda">
+            <li><a href="../index.html">Inicio</a></li>
+        </ul>
+        <ul class="nav-derecha">
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="notificaciones.html">Notificaciones</a></li>
+            <li><a href="mas-cursos.html">Más Cursos</a></li>
+        </ul>
+    </nav>
+    <!-- Navegación para móviles -->
+    <nav class="hamburguesa-navegadora">
+        <!-- Checkbox para manejar el estado -->
+        <input type="checkbox" id="menu-toggle">
+        <!-- Icono de menú hamburguesa -->
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <!-- Menú desplegable -->
+        <ul class="menu-movil">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="notificaciones.html">Notificaciones</a></li>
+            <li><a href="mas-cursos.html">Más Cursos</a></li>
+        </ul>
+          <!-- Overlay invisible para cerrar el menú -->
+        <label for="menu-toggle" class="overlay"></label>
+    </nav>
+    <header class="banner">
+        <div class="contenido-banner">
+            <h1>Cursos recomendados</h1>
+            <p>Explorá y ampliá tus conocimientos con estos cursos recomendados</p>
+        </div>
+            <img src="../assets/banner más cursos.png" alt="Banner Mas Cursos">
+    </header>
+    <main>
+        <!--<section class="carrusel-cursos">-->
+        <section class="container-fluid">
+            <div class="row mb-4">
+                <div class="col-sm-12 col-md-3">
+                    <div class="card h-100 d-flex flex-column">
+                        <div class="card-body d-flex flex-column">
+                          <h3 class="card-title">Curso de Meta Ads: Recorrido objetivos publicitarios</h3>
+                          <p class="card-text">Explorá y comprende los diversos objetivos publicitarios disponibles en Meta Ads y cómo seleccionar el adecuado para tus campañas.</p>
+                          <a href="mas-cursos.html" class="boton mt-auto">VER MÁS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="card h-100 d-flex flex-column">
+                        <div class="card-body d-flex flex-column">
+                          <h3 class="card-title">Curso de Meta Ads: Configuración del catálogo de venta</h3>
+                          <p class="card-text">Aprendé a crear y gestionar catálogos de productos eficaces en Meta Ads.</p>
+                          <a href="mas-cursos.html" class="boton mt-auto">VER MÁS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="card h-100 d-flex flex-column">
+                        <div class="card-body d-flex flex-column">
+                          <h3 class="card-title">Curso de Meta Ads: Configuración del administrador de eventos</h3>
+                          <p class="card-text">Descubrí cómo configurar y gestionar el Administrador de Eventos en Meta Ads.</p>
+                          <a href="mas-cursos.html" class="boton mt-auto">VER MÁS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="card h-100 d-flex flex-column">
+                        <div class="card-body d-flex flex-column">
+                          <h3 class="card-title">Curso de Meta Ads: Creación de campaña de tráfico</h3>
+                          <p class="card-text">Domina las estrategias para generar tráfico hacia tu sitio web o aplicación con campañas de Meta Ads.</p>
+                          <a href="mas-cursos.html" class="boton mt-auto">VER MÁS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+        <section>
+            <h2>Beneficios de aprender con Digital Skill</h2>
+            <ul class="recuadro">
+                <li>Acceso a materiales descargables y actualizaciones constantes.</li>
+                <li>Certificación al completar cada curso.</li>
+                <li>Soporte personalizado por tutores expertos.</li>
+            </ul>
+        </section>
+        <h2>Opiniones de estudiantes</h2>
+        <section class="recuadro">
+            <p><strong>María:</strong>"Los cursos son súper claros y completos. Mejoré muchísimo mi estrategia publicitaria."</p>
+            <p><strong>Carlos:</strong>"Los contenidos me ayudaron a poder gestionar mi negocio digital."</p>
+        </section>
+        <div id="chatbot-button">
+            <button id="chatbot-trigger">💬</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-izq">
+            <p>Power By:</p>
+            <h4>Digital Skill</h4>
+        </div>
+        <div class="footer-centro">
+            <ul class="social-media">
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../assets/ig.png" alt="Instagram" width="50">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="../assets/FB.png" alt="Facebook" width="50">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="../assets/IN.png" alt="Linkedin" width="50">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="../assets/YT.png" alt="Youtube" width="50">
+                    </a>
+                </li>
+            </ul>
+            <p> &copy;2025 Digital Skill. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-derecha">
+            <ul class="legal">
+                <li><a href="">Términos y Condiciones</a></li>
+                <li><a href="">Política de Privacidad</a></li>
+            </ul>
+        </div>    
+    </footer>
+    <!-- Enlace cierre Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

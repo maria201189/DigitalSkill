@@ -1,0 +1,175 @@
+/* ===== BARRA NAVEGADORA (tablet y desktop) ===== */
+
+.barra-navegadora {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: $colorCuarto;
+    color: $colorTerciario;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+  
+.nav-izquierda,.nav-derecha {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.nav-izquierda li, .nav-derecha li {
+    margin-left: 15px;
+}
+  
+.barra-navegadora a {
+    text-decoration: none;
+    color: $colorTerciario;
+    transition: color 0.3s ease;
+}
+
+/* Hover para los enlaces */
+.barra-navegadora a:hover {
+    color: $colorSecondario; /* Cambia al color secundario definido en variables */
+}
+
+/* ===== Navegación móvil ===== */
+.hamburguesa-navegadora {
+    display: block; /* Mostrar en dispositivos móviles */
+    position: fixed; /* Fija la navegación móvil en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $colorCuarto; /* Fondo negro */
+    z-index: 1000;
+    padding: 0.5em 1em; /* Espaciado interno */
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho */
+  }
+  
+  /* Icono de hamburguesa */
+  .menu-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: $colorPrimario;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover del icono de hamburguesa */
+  .menu-icon:hover {
+    color: $colorSecondario;
+  }
+  
+  /* Oculta el checkbox */
+  #menu-toggle {
+    display: none;
+  }
+  
+  /* Menú desplegable móvil */
+  .menu-movil {
+    display: none; /* Oculta el menú por defecto */
+    flex-direction: column;
+    position: fixed; /* Fija el menú a la ventana */
+    top: 0; /* Pegado a la parte superior */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: $colorCuarto; /* Fondo negro */
+    padding-top: 60px; /* Espacio para que no tape la barra de navegación */
+    z-index: 999; /* Por encima del contenido */
+    list-style: none; /* Sin viñetas */
+  }
+  
+  /* Muestra el menú móvil cuando el checkbox está activado */
+  #menu-toggle:checked ~ .menu-icon + .menu-movil {
+    display: flex;
+  }
+  
+  /* Estilo para los enlaces del menú móvil */
+  .menu-movil a {
+    color: $colorSecondario;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .menu-movil a:hover {
+    background-color: $colorPrimario;
+    color: $colorCuarto;
+    border-radius: 5px;
+  }
+  
+  /* Overlay (fondo invisible para cerrar el menú) */
+  .overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Cubre toda la ventana */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 998; /* Por debajo del menú desplegable */
+  }
+  
+  /* Muestra el overlay cuando el checkbox está activado */
+  #menu-toggle:checked ~ .overlay {
+    display: block;
+  }
+  
+  /* Mostrar el menú desplegable cuando se activa el checkbox */
+  
+  #menu-toggle:checked + .menu-icon + .menu-movil {
+    display: flex;
+  }
+  
+  /* Estilo para los enlaces del menú móvil */
+  
+  .menu-movil a {
+    color: $colorSecondario; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado interno */
+    display: block; /* Enlaces como bloques */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover en los enlaces del menú móvil */
+  
+  .menu-movil a:hover {
+    background-color: $colorPrimario; /* Fondo amarillo */
+    color: $colorCuarto; /* Texto negro */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+
+/* ===== ESTILOS DE LA NAVBAR ===== */
+
+@media (max-width: 600px) {
+    /* Muestra la navegación móvil */
+    .hamburguesa-navegadora {
+      display: block;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: black;
+      z-index: 1000;
+      padding: 0.5em 1em;
+    }
+  
+    /* Oculta la navegación regular */
+    .barra-navegadora {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 601px) {
+    /* Oculta la navegación móvil */
+    .hamburguesa-navegadora {
+      display: none;
+    }
+  
+    /* Muestra la navegación regular */
+    .barra-navegadora {
+      display: flex;
+    }
+  }

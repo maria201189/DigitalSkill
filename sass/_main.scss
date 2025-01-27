@@ -1,0 +1,304 @@
+main {
+    padding: 1em; /* Espaciado interno */
+}
+  
+main ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina los márgenes */
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea si no caben */
+    justify-content: flex-start; /* Alinea las tarjetas a la izquierda */
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+/* ===== Estilo para las tarjetas ===== */
+
+.card {
+    border: 1px solid $colorTerciario; /* Borde blanco */
+    background-color: $colorCuarto;
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    max-width: 300px; /* Ancho máximo de la card */
+    text-align: center; /* Centrar contenido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+    gap: 30px; /* Espacio interno entre los elementos de la tarjeta */
+    margin-bottom: 20px; /* Espacio inferior entre tarjetas */
+} 
+
+.card h3 {
+    font-size: 1.3rem;
+    color: $colorPrimario; /* Color del título */
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: $colorTerciario; /* Color del texto */
+    margin: 10px 0;
+}
+
+/* Efecto hover */
+
+.card:hover {
+    transform: translateY(-3px); /* Efecto de desplazamiento */
+    box-shadow: 0px 6px 10px rgba(121, 120, 120, 0.2);
+}
+
+/* ===== Estilos responsivos ===== */
+
+/* Para móviles (pantallas pequeñas) */
+
+@media (max-width: 600px) {
+    .card {
+      width: 90%; /* Aumenta el tamaño del ancho en móviles */
+      max-width: none; /* Elimina el max-width en móviles */
+      padding: 10px; /* Reduce el padding */
+    }
+  
+    .card h3 {
+      font-size: 1.2rem; /* Reduce el tamaño del título */
+    }
+  
+    .card p {
+      font-size: 0.8rem; /* Reduce el tamaño del texto */
+    }
+}
+  
+/* Para tablets (pantallas medianas) */
+  
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card {
+      width: 90%; /* Aumenta el tamaño de la card en tablets */
+      padding: 12px; /* Ajusta el padding */
+    }
+  
+    .card h3 {
+      font-size: 1.2rem; /* Ajuste del tamaño del título */
+    }
+  
+    .card p {
+      font-size: 0.9rem; /* Ajuste del tamaño del texto */
+    }
+}
+  
+/* Para escritorio (pantallas grandes) */
+  
+@media (min-width: 1025px) {
+    .card {
+      width: 90%; /* Tamaño estándar de las cards en pantallas grandes */
+      padding: 15px; /* Espaciado interno normal */
+    }
+  
+    .card h3 {
+      font-size: 1.3rem; /* Tamaño normal del título */
+    }
+  
+    .card p {
+      font-size: 1rem; /* Tamaño normal del texto */
+    }
+}
+
+/*===== ESTILO BOTONES =====*/
+
+.boton {
+    display: inline-block; /* Botón como bloque */
+    width: 100%; /* Toma todo el ancho disponible en móviles */
+    max-width: 300px; /* Máximo ancho en pantallas grandes */
+    min-width: 150px; /* Mínimo ancho en móviles */
+    padding: 10px 20px; /* Espaciado interno (ajustable en cada tamaño) */
+    font-size: 1rem; /* Escalable con la raíz */
+    text-align: center; /* Centra el texto */
+    color: $colorTerciario; /* Texto blanco */
+    background-color: $colorSecondario; /* Fondo base */
+    border: none; /* Sin borde */
+    border-radius: 15px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a mano */
+    transition: background-color 0.3s ease; /* Animación suave en hover */
+}
+        
+/* Hover */
+.boton:hover {
+    background-color: $colorPrimario; /* Cambia el fondo al pasar el cursor */
+    color: $colorCuarto; /* Texto negro */
+}
+
+/* ===== Estilos responsivos ===== */
+
+/* Para móviles (pantallas pequeñas) */
+
+@media (max-width: 600px) {
+    .boton {
+      width: 90%; /* Botón más ancho para ocupar casi todo el espacio */
+      font-size: 0.9rem; /* Texto ligeramente más pequeño */
+      padding: 12px 15px; /* Más alto para facilidad de clic */
+    }
+}
+  
+/* Para tablets (pantallas medianas) */
+  
+@media (min-width: 601px) and (max-width: 1024px) {
+    .boton {
+      width: 70%; /* Reduce el ancho del botón */
+      font-size: 1rem; /* Tamaño del texto estándar */
+      padding: 12px 20px; /* Espaciado moderado */
+    }
+}
+  
+/* Para escritorio (pantallas grandes) */
+@media (min-width: 1025px) {
+    .boton {
+      width: auto; /* Ajusta al contenido */
+      max-width: 300px; /* Máximo ancho definido */
+      font-size: 1.2rem; /* Texto ligeramente más grande */
+      padding: 14px 25px; /* Espaciado más amplio */
+    }
+}
+
+/*==== RECUADRO ELEMENTOS - NO CARD ====*/
+
+.recuadro {
+    border: 1px solid $colorTerciario; /* Borde blanco */
+    background-color: $colorCuarto;
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    text-align: left; /* Contenido alineado a la izquierda */
+    box-shadow: 0px 6px 10px rgba(121, 120, 120, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  /*==== DESPLEGABLE CURSOS ====*/
+
+/* Dropdown contenedor */
+.dropdown {
+  position: relative; /* Necesario para el posicionamiento del menú */
+}
+
+/* Botón del dropdown */
+.dropdown-toggle {
+  background-color: $colorPrimario; /* Fondo personalizado */
+  color: $colorCuarto; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 15px; /* Esquinas redondeadas */
+  padding: 10px 20px; /* Espaciado interno */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+/* Hover y focus en el botón */
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  background-color: $colorSecondario; /* Fondo al pasar el mouse */
+  color: $colorTerciario; /* Texto al pasar el mouse */
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  background-color: $colorCuarto; /* Fondo del menú */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 10px 0; /* Espaciado interno */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
+}
+
+/* Enlaces dentro del menú */
+.dropdown-item {
+  color: $colorSecondario; /* Color inicial del texto */
+  padding: 10px 15px; /* Espaciado interno */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+/* Hover en los enlaces */
+.dropdown-item:hover {
+  background-color: $colorPrimario; /* Fondo al pasar el mouse */
+  color: $colorCuarto; /* Texto al pasar el mouse */
+  border-radius: 10px; /* Bordes redondeados en hover */
+}
+
+/*==== CURSOS ====*/
+
+#programa-del-curso h2 {
+  margin-bottom: 15px; /* Añade espacio debajo del título */
+  text-align: left; /* Asegura alineación a la izquierda */
+}
+
+#contenido-dinamico .content {
+  display: none; /* Ocultar todo el contenido por defecto */
+}
+
+#contenido-dinamico .content:target {
+  display: block; /* Mostrar solo el contenido que coincida con el ID en el hash */
+}
+
+#contenido-dinamico {
+  border: 1px solid $colorTerciario; /* Borde */
+  background-color: $colorCuarto; /* Fondo */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  height: 100%; /* Asegura que ocupe el alto completo de su columna */
+  box-sizing: border-box; /* Incluye padding y border */
+  overflow: auto; /* Permite desplazamiento si el contenido es más largo */
+}
+
+/*==== CHAT ====*/
+
+.recuadro {
+  padding: 15px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  flex-grow: 1; /* Asegura que el recuadro crezca para llenar el espacio disponible */
+}
+
+.form-chat {
+  display: flex;
+  flex-direction: column;
+}
+
+form label, form textarea, form button {
+  margin-bottom: 10px; /* Espaciado entre los elementos del formulario */
+}
+
+.button-chat {
+  background-color: $colorSecondario; /* Fondo del botón */
+  color: $colorTerciario; /* Color del texto */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-chat:hover {
+  background-color: $colorPrimario; /* Fondo al pasar el mouse */
+  color: $colorCuarto;
+}
+
+/*==== BOTÓN CHAT FIJO ====*/
+
+/* Contenedor del botón del chatbot */
+#chatbot-button {
+  position: fixed; /* Fijo en la pantalla */
+  bottom: 5%; /* Espaciado desde la parte inferior */
+  right: 3%; /* Espaciado desde el lado derecho */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Botón del chatbot */
+#chatbot-trigger {
+  background-color: $colorPrimario; /* Color del botón */
+  border: none; /* Sin bordes */
+  border-radius: 50%; /* Forma circular */
+  width: 60px; /* Ancho del botón */
+  height: 60px; /* Alto del botón */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  font-size: 24px; /* Tamaño del ícono o texto */
+  color: $colorTerciario; /* Color del texto o ícono */
+  cursor: pointer; /* Cursor al pasar sobre el botón */
+  display: flex; /* Para centrar el contenido */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animación */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+#chatbot-trigger:hover {
+  background-color: $colorSecondario; /* Cambio de color */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}

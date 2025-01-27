@@ -1,0 +1,29 @@
+$colorPrimario: #E9A025;
+$colorSecondario: #815EDB;
+$colorTerciario: #ffffff;
+$colorCuarto: black; 
+
+@font-face {
+    font-family: "ErasITCBold"; 
+    src: url(../fonts/ErasITCBold.TTF) format(truetype);
+}
+    
+@font-face {
+    font-family: "ErasITCSemiBold"; 
+    src: url(../fonts/ErasITCSemiBold.TTF) format(truetype);
+}
+    
+@font-face {
+    font-family: 'FuturaBkNormal';
+    src: url('../fonts/FuturaBKNormal.ttf') format('truetype');
+}
+    
+@font-face {
+    font-family: 'FuturaBkCursiva';
+    src: url('../fonts/FuturaBkBTCursiva.ttf') format('truetype');
+}
+
+$font-titulo: "ErasITCBold", sans-serif;
+$font-subtitulo: "ErasITCSemiBold", sans-serif;
+$font-texto: "FuturaBkNormal", sans-serif;
+$font-link: "FuturaBkCursiva", sans-serif;
